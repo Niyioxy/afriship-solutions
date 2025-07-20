@@ -78,9 +78,14 @@ nav a {
   display: inline-block;
 }
 
-.whatsapp {
-  background-color: #25D366;
-  color: white;
+.whatsapp-img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 20px auto;
 }
 
 #about {
