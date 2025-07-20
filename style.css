@@ -48,10 +48,42 @@ body {
 
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-color: #007F5F;
+  padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #F4B400; /* Mustard Yellow */
+}
+
+.logo img {
+  height: 50px;
+}
+
 
 .logo-container img.logo {
   height: 50px;
