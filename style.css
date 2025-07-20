@@ -87,6 +87,11 @@ nav a {
   display: block;
   margin: 20px auto;
 }
+@media (max-width: 768px) {
+  .whatsapp-img {
+    max-width: 90%;
+  }
+}
 
 #about {
   display: flex;
