@@ -1,87 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AfriShip Solutions</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-white text-gray-800 font-sans leading-relaxed">
+<body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-  <div class="hero-content">
-    <h1>Ship With Confidence</h1>
-    <p>Fast, reliable deliveries from Nigeria to the UK, US, and Canada.</p>
-    <a href="#contact" class="btn">Get Started</a>
-  </div>
-  <div class="hero-animation">
-    <div id="hero-lottie"></div> <!-- Lottie will mount here -->
-  </div>
-</section>
+  <header>
+    <img src="logo.png" alt="AfriShip Logo" class="logo">
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <section class="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-blue-900 to-yellow-400 py-20 px-6 sm:px-12">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-      <div class="text-white max-w-xl animate-fadeInLeft">
-        <h1 class="text-4xl sm:text-6xl font-extrabold mb-6 drop-shadow-md">
-          We Ship Nigeria to Your Doorstep
-        </h1>
-        <p class="text-lg sm:text-xl mb-6 drop-shadow">
-          Fast, reliable, and culturally rich deliveries from Nigeria to the UK, US & Canada in 5–7 days.
-        </p>
-        <a href="https://wa.me/2347062302148" class="bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:scale-105 inline-block">
-          WhatsApp Now
-        </a>
-      </div>
-      <div class="mt-10 md:mt-0 animate-slideInRight">
-        <img src="https://images.unsplash.com/photo-1612277796063-3e9e8f135949" alt="Shipping boxes" class="w-full max-w-md rounded-2xl shadow-2xl">
-      </div>
+  <section id="hero" style="background-image: url('delivery-van.jpg');">
+    <div class="overlay">
+      <h1>Ship Culture to the World</h1>
+      <p>We deliver African heritage — food, fabric, and love — to your doorstep abroad</p>
+      <a href="#contact" class="btn">Get a Quote</a>
     </div>
-    <!-- Floating animation box -->
-    <div class="absolute -top-8 -right-8 w-48 h-48 bg-yellow-400 rounded-full mix-blend-overlay animate-pulse opacity-30"></div>
   </section>
 
-  <!-- Features Section -->
-  <section class="py-20 px-6 sm:px-12 bg-white">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-10 text-emerald-700">Why AfriShip?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg transition transform hover:scale-105">
-          <h3 class="text-xl font-bold text-blue-900 mb-3">Speedy Delivery</h3>
-          <p>We deliver from Nigeria to the UK in just 5–7 working days. Your goods, on time, every time.</p>
-        </div>
-        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg transition transform hover:scale-105">
-          <h3 class="text-xl font-bold text-blue-900 mb-3">Cultural Relevance</h3>
-          <p>From dried fish to Ankara, we specialize in items that truly matter to diaspora families.</p>
-        </div>
-        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg transition transform hover:scale-105">
-          <h3 class="text-xl font-bold text-blue-900 mb-3">Affordable Rates</h3>
-          <p>Competitive prices, no surprises. We work with your budget while maintaining top-tier service.</p>
-        </div>
+  <section id="about">
+    <div class="about-text">
+      <h2>About AfriShip</h2>
+      <p>AfriShip Solutions is Nigeria’s premium shipping brand that helps you export dried fish, traditional foodstuff, herbs, and fashion items abroad.</p>
+    </div>
+    <img src="ankara.jpg" alt="Ankara Fabric" class="about-image">
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="drie-fish.jpg" alt="Dried Fish">
+        <h3>Dried Foods</h3>
+        <p>Expertly packaged dried fish, meat, and crayfish shipped safely to the UK, US, and Canada.</p>
+      </div>
+      <div class="service-card">
+        <img src="food-items.jpg" alt="Food Items">
+        <h3>Traditional Foodstuff</h3>
+        <p>From garri to iru, we ensure your pantry abroad stays fully stocked.</p>
+      </div>
+      <div class="service-card">
+        <img src="garrinjebu.jpg" alt="Garri Ijebu">
+        <h3>Herbs & Spices</h3>
+        <p>We export medicinal herbs, ogbono, egusi and more with proper labeling and customs documentation.</p>
+      </div>
+      <div class="service-card">
+        <img src="delivery-box.jpg" alt="Delivery Box">
+        <h3>Packaging & Pickup</h3>
+        <p>We offer free pickup in Lagos, and safe export-ready packaging.</p>
       </div>
     </div>
   </section>
 
-<section class="testimonials">
-  <h2>What Our Clients Say</h2>
-  <div id="testimonial-container" class="testimonial-slider"></div>
-</section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Ready to ship? Let's talk on WhatsApp or drop your details below.</p>
+    <img src="contact-whatsapp.jpg" alt="WhatsApp Contact" class="contact-image">
+    <a href="https://wa.me/2347062302148" class="btn whatsapp">Chat with Us</a>
 
-
-  <!-- CTA Section -->
-  <section class="py-16 bg-gradient-to-br from-yellow-300 via-white to-emerald-100 text-center">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold mb-4 text-emerald-700">Ready to Ship?</h2>
-      <p class="text-lg mb-6 text-gray-700">Join hundreds of happy Nigerians abroad who trust AfriShip for peace-of-mind deliveries.</p>
-      <a href="https://wa.me/2347062302148" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition transform hover:scale-105">
-        Chat with Our Team
-      </a>
-    </div>
+    <form method="POST" action="/submit" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="What do you want to ship?" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center py-6">
+  <footer style="background-image: url('global-map.jpg');">
     <p>&copy; 2025 AfriShip Solutions. All rights reserved.</p>
   </footer>
 
