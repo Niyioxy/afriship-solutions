@@ -2,96 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AfriShip Prices</title>
+  <title>AfriShip Pricing</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f8f8;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      color: #333;
+      background-color: #ffffff;
+      color: #1A237E;
     }
 
-    .price-header {
-      background-color: #1A237E;
-      color: white;
-      padding: 50px 20px;
+    header {
+      background-color: #007F5F;
+      color: #fff;
+      padding: 20px 0;
       text-align: center;
-      animation: fadeInDown 1.2s ease-in-out;
+      animation: slideInDown 1s ease-out;
     }
 
-    .price-header h1 {
-      font-size: 3rem;
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .pricing-container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .card {
+      border: 2px solid #007F5F;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      background-color: #f4f4f4;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h2 {
+      color: #F4B400;
       margin-bottom: 10px;
     }
 
-    .price-header p {
-      font-size: 1.2rem;
-      margin: 0 auto;
-      max-width: 700px;
-      line-height: 1.6;
+    .card p {
+      margin: 8px 0;
+      font-size: 1rem;
     }
 
-    .pricing-table {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-      animation: slideInUp 1.3s ease-in-out;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-    }
-
-    thead {
-      background-color: #007F5F;
-      color: white;
-    }
-
-    th, td {
-      padding: 15px 20px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    tbody tr:hover {
-      background-color: #f1f1f1;
-      transition: background 0.3s ease;
-    }
-
-    .note {
+    footer {
       text-align: center;
-      margin: 20px auto;
-      font-style: italic;
-      color: #1A237E;
-      animation: fadeIn 2s ease;
+      background-color: #1A237E;
+      color: #fff;
+      padding: 20px 0;
+      margin-top: 40px;
     }
 
-    @keyframes fadeInDown {
+    /* Animations */
+    @keyframes slideInDown {
       from {
-        opacity: 0;
         transform: translateY(-40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes slideInUp {
-      from {
         opacity: 0;
-        transform: translateY(60px);
       }
       to {
-        opacity: 1;
         transform: translateY(0);
+        opacity: 1;
       }
     }
 
@@ -104,74 +92,58 @@
       }
     }
 
-    footer {
-      background-color: #A0522D;
-      color: #fff;
-      padding: 30px;
-      text-align: center;
-      margin-top: 50px;
-      border-top-left-radius: 30px;
-      border-top-right-radius: 30px;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="price-header">
-    <h1>AfriShip Delivery Rates</h1>
-    <p>Transparent pricing for shipping your culturally significant items from Nigeria to the world. Fast, Safe, and Stress-Free!</p>
-  </div>
+  <header>
+    <h1>Shipping Prices & Delivery Timelines</h1>
+    <p>Transparent, fast, and tailored to you — wherever you are.</p>
+  </header>
 
-  <div class="pricing-table">
-    <table>
-      <thead>
-        <tr>
-          <th>Destination Country</th>
-          <th>Delivery Time</th>
-          <th>Price per Kg (₦)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>United Kingdom</td>
-          <td>5 - 7 working days</td>
-          <td>₦13,500</td>
-        </tr>
-        <tr>
-          <td>United States</td>
-          <td>7 - 10 working days</td>
-          <td>₦16,000</td>
-        </tr>
-        <tr>
-          <td>Canada</td>
-          <td>8 - 12 working days</td>
-          <td>₦17,500</td>
-        </tr>
-        <tr>
-          <td>Germany</td>
-          <td>6 - 9 working days</td>
-          <td>₦14,000</td>
-        </tr>
-        <tr>
-          <td>France</td>
-          <td>6 - 9 working days</td>
-          <td>₦14,000</td>
-        </tr>
-        <tr>
-          <td>Netherlands</td>
-          <td>6 - 8 working days</td>
-          <td>₦14,500</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p class="note">
-    Minimum chargeable weight: 3kg. Prices include customs documentation. For bulk or special cargo, please <a href="https://wa.me/2347062302148" style="color: #F4B400; text-decoration: underline;">contact us on WhatsApp</a>.
-  </p>
+  <section class="pricing-container">
+    <div class="pricing-grid">
+      <div class="card">
+        <h2>🇬🇧 United Kingdom</h2>
+        <p>Price: ₦8,500 per kg</p>
+        <p>Delivery: 5–7 working days</p>
+      </div>
+      <div class="card">
+        <h2>🇺🇸 United States</h2>
+        <p>Price: ₦9,500 per kg</p>
+        <p>Delivery: 7–10 working days</p>
+      </div>
+      <div class="card">
+        <h2>🇨🇦 Canada</h2>
+        <p>Price: ₦10,000 per kg</p>
+        <p>Delivery: 8–12 working days</p>
+      </div>
+      <div class="card">
+        <h2>🇩🇪 Germany</h2>
+        <p>Price: ₦9,000 per kg</p>
+        <p>Delivery: 6–9 working days</p>
+      </div>
+      <div class="card">
+        <h2>🇫🇷 France</h2>
+        <p>Price: ₦8,800 per kg</p>
+        <p>Delivery: 6–8 working days</p>
+      </div>
+      <div class="card">
+        <h2>🇳🇱 Netherlands</h2>
+        <p>Price: ₦9,000 per kg</p>
+        <p>Delivery: 6–9 working days</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 AfriShip Solutions | Culturally Rooted Logistics | +234 706 230 2148
+    <p>&copy; 2025 AfriShip Solutions. All rights reserved.</p>
+    <p>📞 +234 706 230 2148 | 🌍 www.afriship.com</p>
   </footer>
 
 </body>
