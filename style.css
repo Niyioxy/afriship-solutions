@@ -122,6 +122,22 @@ body {
 .nav-links li a:hover {
   color: #F4B400; /* Mustard highlight on hover */
 }
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #007F5F;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 
 #hero {
   height: 90vh;
