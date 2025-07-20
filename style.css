@@ -49,13 +49,14 @@ nav a {
   background-size: cover;
 }
 
-.hero-image img,
-.about-image img {
+.hero-img {
   max-width: 500px;
-  height: auto;
   width: 100%;
+  height: auto;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto;
 }
 
 }
