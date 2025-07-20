@@ -49,9 +49,15 @@ nav a {
   background-size: cover;
 }
 
-.hero-img {
-  width: 400px;
-  border-radius: 10px;
+.hero-image img,
+.about-image img {
+  max-width: 500px;
+  height: auto;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
 }
 .overlay {
   background: rgba(0, 0, 0, 0.5);
