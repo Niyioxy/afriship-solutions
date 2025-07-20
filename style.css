@@ -18,15 +18,32 @@ header {
   padding: 1rem 2rem;
   background-color: #007F5F;
 }
+/* Existing styles for welcome-text */
 .welcome-text {
   font-size: 44px;
   line-height: 1.4;
   font-weight: 800;
   text-align: center;
-  color: #1A237E; /* Deep navy base for visibility */
+  color: #1A237E;
   margin-top: 40px;
   margin-bottom: 20px;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+.brand-name {
+  color: #007F5F;
+  font-weight: 900;
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .brand-name {
