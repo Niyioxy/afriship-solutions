@@ -116,6 +116,31 @@ nav a {
   object-fit: cover;
   border-radius: 8px;
 }
+.reach-section {
+  text-align: center;
+  padding: 60px 10%;
+  background-color: #ffffff;
+  color: #1A237E;
+}
+
+.reach-section h2 {
+  font-size: 36px;
+  color: #007F5F;
+  margin-bottom: 20px;
+}
+
+.reach-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.map-container img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
 
 #contact {
   background-color: #fefefe;
