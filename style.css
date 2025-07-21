@@ -627,3 +627,26 @@ form button {
   font-size: 13px;
   border-top: 1px solid rgba(255,255,255,0.2);
 }
+<head>
+  <title>Prices - AfriShip</title>
+  <style>
+    nav {
+      background-color: #004d40;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f4b400;
+    }
+  </style>
+</head>
