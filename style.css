@@ -235,7 +235,7 @@ body {
 
 .flyer-promo {
   background-color: #ffffff;
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -244,17 +244,18 @@ body {
   margin: auto;
 }
 
-.flyer-img {
+.flyer-img-small {
   width: 100%;
-  max-width: 900px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 550px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   transition: transform 0.3s ease-in-out;
 }
 
-.flyer-img:hover {
-  transform: scale(1.02);
+.flyer-img-small:hover {
+  transform: scale(1.01);
 }
+
 
 }
 .overlay {
