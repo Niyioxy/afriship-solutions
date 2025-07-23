@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AfriShip Order Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Additional styles specific to order page */
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      margin: 40px auto 20px;
+    }
+
+    .tab-buttons button {
+      background-color: #007F5F;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      margin: 0 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .tab-buttons button.active,
+    .tab-buttons button:hover {
+      background-color: #F4B400;
+      color: black;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .cargo-card img {
+      width: 40px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar (reuse across all pages) -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="AfriShip Logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="prices.html">Pricing</a></li>
+        <li><a href="order.html" class="active">Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="order-section">
+      <h1 class="section-title">Place Your Order</h1>
+      <p class="section-intro">Whether you want us to source or just ship — you're in the right place.</p>
+
+      <!-- Toggle Tabs -->
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="sourcing">Sourcing</button>
+        <button class="tab-btn" data-tab="shipping">Shipping</button>
+      </div>
+
+      <!-- Sourcing Form -->
+      <div class="tab-content active" id="sourcing">
+        <form id="sourcing-form">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required>
+
+          <label for="country">Destination Country</label>
+          <select id="country" required>
+            <option value="">Select Country</option>
+            <option value="UK">United Kingdom</option>
+            <option value="USA">United States</option>
+            <option value="Canada">Canada</option>
+          </select>
+
+          <label for="items">Items You Want Us to Source</label>
+          <textarea id="items" rows="4" placeholder="E.g., Garri Ijebu, Dried Fish..." required></textarea>
+
+          <button type="submit" class="cta-button">Send to WhatsApp</button>
+        </form>
+      </div>
+
+      <!-- Shipping Form -->
+      <div class="tab-content" id="shipping">
+        <div class="cargo-types">
+          <div class="cargo-card">
+            <img src="images/protein-icon.png" alt="Protein Icon">
+            <h3>🦐 Protein Cargo</h3>
+            <ul>
+              <li>Dry Fish</li>
+              <li>Stockfish</li>
+              <li>Crayfish</li>
+              <li>Dried Meat</li>
+              <li>Periwinkle</li>
+            </ul>
+          </div>
+          <div class="cargo-card">
+            <img src="images/general-icon.png" alt="General Cargo Icon">
+            <h3>📦 General Cargo</h3>
+            <ul>
+              <li>Garri Ijebu</li>
+              <li>Yam Flour</li>
+              <li>Egusi, Ogbono</li>
+              <li>Herbs, Spices</li>
+              <li>Clothing</li>
+            </ul>
+          </div>
+        </div>
+
+        <form id="shipping-form">
+          <label for="senderName">Sender Name</label>
+          <input type="text" id="senderName" required>
+
+          <label for="pickupLocation">Pickup Address in Nigeria</label>
+          <textarea id="pickupLocation" rows="2" required></textarea>
+
+          <label for="cargoDetails">Cargo Description</label>
+          <textarea id="cargoDetails" rows="4" placeholder="List items and estimated weight..." required></textarea>
+
+          <label for="deliveryCountry">Delivery Country</label>
+          <select id="deliveryCountry" required>
+            <option value="">Select Country</option>
+            <option value="UK">United Kingdom</option>
+            <option value="USA">United States</option>
+            <option value="Canada">Canada</option>
+          </select>
+
+          <button type="submit" class="cta-button">Send Shipping Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Form Script -->
+  <script>
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    document.getElementById("sourcing-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("fullName").value;
+      const email = document.getElementById("email").value;
+      const country = document.getElementById("country").value;
+      const items = document.getElementById("items").value;
+
+      const msg = `Hello AfriShip,%0AI'm requesting sourcing help.%0AName: ${name}%0AEmail: ${email}%0ACountry: ${country}%0AItems: ${items}`;
+      window.open(`https://wa.me/2347062302148?text=${msg}`, '_blank');
+    });
+
+    document.getElementById("shipping-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("senderName").value;
+      const address = document.getElementById("pickupLocation").value;
+      const details = document.getElementById("cargoDetails").value;
+      const country = document.getElementById("deliveryCountry").value;
+
+      const msg = `Hello AfriShip,%0AI have a shipping request.%0AName: ${name}%0AAddress: ${address}%0ACargo: ${details}%0ACountry: ${country}`;
+      window.open(`https://wa.me/2347062302148?text=${msg}`, '_blank');
+    });
+  </script>
+
+</body>
+</html>
