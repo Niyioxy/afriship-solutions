@@ -1,163 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AfriShip Pricing</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #ffffff;
-      color: #1A237E;
-    }
-
-    header {
-      background-color: #007F5F;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-      animation: slideInDown 1s ease-out;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    .pricing-container {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      animation: fadeIn 1.2s ease-in;
-    }
-
-    .card {
-      border: 2px solid #007F5F;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      background-color: #f4f4f4;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card h2 {
-      color: #F4B400;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      margin: 8px 0;
-      font-size: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #1A237E;
-      color: #fff;
-      padding: 20px 0;
-      margin-top: 40px;
-    }
-
-    /* Animations */
-    @keyframes slideInDown {
-      from {
-        transform: translateY(-40px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AfriShip Solutions – Pricing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <header>
-    <h1>Shipping Prices & Delivery Timelines</h1>
-    <p>Transparent, fast, and tailored to you — wherever you are.</p>
-     <!-- Navigation Bar -->
-<nav class="navbar">
-  <div class="container nav-container">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-     <a href="services.html">Our Services</a>
-      <li><a href="prices.html">Prices</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="services.html">Our Services</a>
+    <a href="price.html">Prices</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
-</nav>
 
-  </header>
-
-  <section class="pricing-container">
-    <div class="pricing-grid">
-      <div class="card">
-        <h2>🇬🇧 United Kingdom</h2>
-        <p>Price: ₦8,500 per kg</p>
-        <p>Delivery: 5–7 working days</p>
-      </div>
-      <div class="card">
-        <h2>🇺🇸 United States</h2>
-        <p>Price: ₦9,500 per kg</p>
-        <p>Delivery: 7–10 working days</p>
-      </div>
-      <div class="card">
-        <h2>🇨🇦 Canada</h2>
-        <p>Price: ₦10,000 per kg</p>
-        <p>Delivery: 8–12 working days</p>
-      </div>
-      <div class="card">
-        <h2>🇩🇪 Germany</h2>
-        <p>Price: ₦9,000 per kg</p>
-        <p>Delivery: 6–9 working days</p>
-      </div>
-      <div class="card">
-        <h2>🇫🇷 France</h2>
-        <p>Price: ₦8,800 per kg</p>
-        <p>Delivery: 6–8 working days</p>
-      </div>
-      <div class="card">
-        <h2>🇳🇱 Netherlands</h2>
-        <p>Price: ₦9,000 per kg</p>
-        <p>Delivery: 6–9 working days</p>
-      </div>
-    </div>
+  <!-- Page Heading -->
+  <section class="pricing-header">
+    <h1>Shipping Prices</h1>
+    <p>Transparent rates. Fast delivery. Global reach.</p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 AfriShip Solutions. All rights reserved.</p>
-    <p>📞 +234 706 230 2148 | 🌍 www.afriship.com</p>
-  </footer>
+  <!-- Pricing Table -->
+  <section class="pricing-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Weight (0–5kg)</th>
+          <th>Weight (6–10kg)</th>
+          <th>Weight (11–20kg)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>United Kingdom</td>
+          <td>₦25,000</td>
+          <td>₦40,000</td>
+          <td>₦70,000</td>
+        </tr>
+        <tr>
+          <td>USA</td>
+          <td>₦28,000</td>
+          <td>₦45,000</td>
+          <td>₦80,000</td>
+        </tr>
+        <tr>
+          <td>Canada</td>
+          <td>₦30,000</td>
+          <td>₦48,000</td>
+          <td>₦85,000</td>
+        </tr>
+        <tr>
+          <td>Germany</td>
+          <td>₦26,000</td>
+          <td>₦42,000</td>
+          <td>₦75,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="cta">
+    <h2>Have questions?</h2>
+    <p>Chat with us directly on WhatsApp:</p>
+    <a href="https://wa.me/2347062302148" class="cta-btn">📦 Message Us Now</a>
+  </section>
 
 </body>
 </html>
