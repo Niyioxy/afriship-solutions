@@ -134,6 +134,21 @@
     <p>&copy; 2025 AfriShip Solutions. All rights reserved.</p>
   </div>
 </footer>
+<script>
+  document.getElementById("whatsapp-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const phoneNumber = "2347062302148"; // Your WhatsApp number
+    const fullMessage = `Hello AfriShip,%0A%0AMy Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
+    window.open(whatsappURL, '_blank');
+  });
+</script>
 
 </body>
 </html>
