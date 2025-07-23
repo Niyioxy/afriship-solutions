@@ -141,10 +141,13 @@
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
+    const phoneNumber = "2347062302148";
 
-    const phoneNumber = "2347062302148"; // Your WhatsApp number
     const fullMessage = `Hello AfriShip,%0A%0AMy Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
 
+    // Show thank you message
+    alert("Thank you for reaching out to AfriShip! We'll continue this conversation on WhatsApp.");
+    
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
     window.open(whatsappURL, '_blank');
   });
