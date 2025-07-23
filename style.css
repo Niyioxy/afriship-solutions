@@ -647,6 +647,32 @@ form button:hover {
   padding: 40px 20px 20px 20px;
   font-size: 15px;
 }
+.faq-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  color: #1A237E;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq {
+  margin-bottom: 30px;
+}
+
+.faq h3 {
+  font-size: 20px;
+  color: #007F5F;
+  margin-bottom: 10px;
+}
+
+.faq p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
 
 .footer-container {
   display: flex;
