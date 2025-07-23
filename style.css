@@ -233,6 +233,29 @@ body {
   margin: 0 auto;
 }
 
+.flyer-promo {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.flyer-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.flyer-img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.flyer-img:hover {
+  transform: scale(1.02);
+}
+
 }
 .overlay {
   background: rgba(0, 0, 0, 0.5);
