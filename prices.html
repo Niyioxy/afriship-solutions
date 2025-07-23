@@ -1,163 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AfriShip Pricing</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shipping Prices & Delivery</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #ffffff;
-      color: #1A237E;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #007F5F;
+      color: white;
     }
 
     header {
-      background-color: #007F5F;
-      color: #fff;
-      padding: 20px 0;
       text-align: center;
-      animation: slideInDown 1s ease-out;
+      padding: 2rem 1rem 1rem;
     }
 
-    h1 {
-      margin: 0;
+    header h1 {
       font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
     }
 
-    .pricing-container {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      animation: fadeIn 1.2s ease-in;
-    }
-
-    .card {
-      border: 2px solid #007F5F;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      background-color: #f4f4f4;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card h2 {
-      color: #F4B400;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      margin: 8px 0;
+    header p {
       font-size: 1rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
     }
 
-    footer {
+    nav {
+      background-color: #004C3F;
+      padding: 1rem 0;
       text-align: center;
-      background-color: #1A237E;
-      color: #fff;
-      padding: 20px 0;
-      margin-top: 40px;
     }
 
-    /* Animations */
-    @keyframes slideInDown {
-      from {
-        transform: translateY(-40px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+    nav li a {
+      text-decoration: none;
+      color: #FFFFFF;
+      font-weight: 500;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
+    nav li a:hover {
+      color: #F4B400;
+      border-bottom: 2px solid #F4B400;
     }
+
+    section {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* Add more styling for pricing content here later */
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Shipping Prices & Delivery Timelines</h1>
-    <p>Transparent, fast, and tailored to you — wherever you are.</p>
-     <!-- Navigation Bar -->
-<nav class="navbar">
-  <div class="container nav-container">
-    <ul class="nav-links">
+  <nav>
+    <ul>
       <li><a href="index.html">Home</a></li>
-     <a href="services.html">Our Services</a>
-      <li><a href="prices.html">Prices</a></li>
+      <li><a href="services.html">Our Services</a></li>
+      <li><a href="price.html">Prices</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  </div>
-</nav>
+  </nav>
 
+  <header>
+    <h1>Shipping Prices & Delivery Timelines</h1>
+    <p>Transparent, fast, and tailored to you — wherever you are.</p>
   </header>
 
-  <section class="pricing-container">
-    <div class="pricing-grid">
-      <div class="card">
-        <h2>🇬🇧 United Kingdom</h2>
-        <p>Price: ₦8,500 per kg</p>
-        <p>Delivery: 5–7 working days</p>
-      </div>
-      <div class="card">
-        <h2>🇺🇸 United States</h2>
-        <p>Price: ₦9,500 per kg</p>
-        <p>Delivery: 7–10 working days</p>
-      </div>
-      <div class="card">
-        <h2>🇨🇦 Canada</h2>
-        <p>Price: ₦10,000 per kg</p>
-        <p>Delivery: 8–12 working days</p>
-      </div>
-      <div class="card">
-        <h2>🇩🇪 Germany</h2>
-        <p>Price: ₦9,000 per kg</p>
-        <p>Delivery: 6–9 working days</p>
-      </div>
-      <div class="card">
-        <h2>🇫🇷 France</h2>
-        <p>Price: ₦8,800 per kg</p>
-        <p>Delivery: 6–8 working days</p>
-      </div>
-      <div class="card">
-        <h2>🇳🇱 Netherlands</h2>
-        <p>Price: ₦9,000 per kg</p>
-        <p>Delivery: 6–9 working days</p>
-      </div>
-    </div>
+  <section>
+    <p>[Pricing table and delivery timeline content goes here]</p>
   </section>
-
-  <footer>
-    <p>&copy; 2025 AfriShip Solutions. All rights reserved.</p>
-    <p>📞 +234 706 230 2148 | 🌍 www.afriship.com</p>
-  </footer>
 
 </body>
 </html>
