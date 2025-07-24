@@ -2,350 +2,211 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AfriShip Order Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order | AfriShip Solutions</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Additional styles specific to order page */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background-color: #007F5F;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+    .navbar .logo img {
+      height: 50px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .order-section {
+      padding: 60px 10%;
+      background-color: #fdfdfd;
+    }
+    .order-section h2 {
+      font-size: 36px;
+      color: #007F5F;
+      text-align: center;
+      margin-bottom: 20px;
+    }
     .tab-buttons {
       display: flex;
       justify-content: center;
-      margin: 40px auto 20px;
+      margin-bottom: 30px;
+      gap: 20px;
     }
-
-.logo img,
-.logo-img {
-  height: 50px;
-  width: auto;
-  max-width: 180px;
-  display: inline-block;
-  object-fit: contain;
-  vertical-align: middle;
-}
     .tab-buttons button {
+      padding: 12px 28px;
       background-color: #007F5F;
       color: white;
-      padding: 10px 25px;
       border: none;
-      margin: 0 10px;
-      font-size: 1rem;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
       cursor: pointer;
-      border-radius: 6px;
-      transition: background-color 0.3s;
     }
-
-    .tab-buttons button.active,
-    .tab-buttons button:hover {
+    .tab-buttons button.active {
       background-color: #F4B400;
       color: black;
     }
-
-/* Section Styling */
-.order-section {
-  padding: 60px 10%;
-  background-color: #fdfdfd;
-}
-
-.order-section h2 {
-  font-size: 36px;
-  color: #007F5F;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.tab-buttons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-  gap: 20px;
-}
-
-.tab-buttons button {
-  padding: 12px 28px;
-  background-color: #007F5F;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.tab-buttons button:hover,
-.tab-buttons .active {
-  background-color: #F4B400;
-  color: #000;
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-  animation: fadeIn 0.6s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Cargo Cards */
-.cargo-category {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin: 40px 0;
-  justify-content: center;
-}
-
-.cargo-card {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  text-align: center;
-  width: 250px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cargo-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
-}
-
-.cargo-card img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 15px;
-}
-
-.cargo-card h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #1A237E;
-}
-
-.cargo-card p {
-  font-size: 15px;
-  color: #333;
-}
-
-/* CTA Button */
-.order-btn {
-  display: inline-block;
-  background-color: #25D366;
-  color: white;
-  padding: 14px 32px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 30px;
-  transition: background-color 0.3s ease;
-}
-
-.order-btn:hover {
-  background-color: #1ebe5d;
-}
-
-/* Form Styling */
-.order-form {
-  max-width: 600px;
-  margin: 40px auto;
-}
-
-.order-form input,
-.order-form select,
-.order-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 15px;
-}
-
-.order-form button {
-  background-color: #007F5F;
-  color: white;
-  padding: 14px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.order-form button:hover {
-  background-color: #055e45;
-}
-
     .tab-content {
       display: none;
-      animation: fadeIn 0.6s ease-in-out;
+      animation: fadeIn 0.5s ease-in-out;
     }
-
     .tab-content.active {
       display: block;
     }
-
+    .cargo-category {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .cargo-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      width: 260px;
+      text-align: center;
+    }
     .cargo-card img {
-      width: 40px;
+      width: 60px;
       height: auto;
       margin-bottom: 10px;
     }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(10px);}
-      to {opacity: 1; transform: translateY(0);}
+    .order-form {
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .order-form input,
+    .order-form textarea,
+    .order-form select {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .order-form button {
+      background-color: #007F5F;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .footer {
+      background-color: #1A237E;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 60px;
     }
   </style>
+  <script>
+    function openTab(tabId) {
+      const contents = document.querySelectorAll(".tab-content");
+      contents.forEach(c => c.classList.remove("active"));
+      document.getElementById(tabId).classList.add("active");
+
+      const buttons = document.querySelectorAll(".tab-buttons button");
+      buttons.forEach(b => b.classList.remove("active"));
+      document.querySelector(`[data-tab="${tabId}"]`).classList.add("active");
+    }
+    window.onload = () => openTab('sourcing');
+  </script>
 </head>
 <body>
-
-  <!-- Navbar (reuse across all pages) -->
-  <header class="site-header">
-<div class="logo">
-  <a href="index.html">
-    <img src="images/logo.png" alt="AfriShip Logo" class="logo-img">
-  </a>
-</div>
-
-
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="prices.html">Pricing</a></li>
-        <li><a href="order.html" class="active">Order</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="order.html">Order</a></li>
-
-      </ul>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="AfriShip Logo"></a>
     </div>
-  </header>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="prices.html">Prices</a></li>
+      <li><a href="order.html" class="active">Order</a></li>
+    </ul>
+  </nav>
 
-  <main>
-    <section class="order-section">
-      <h1 class="section-title">Place Your Order</h1>
-      <p class="section-intro">Whether you want us to source or just ship — you're in the right place.</p>
+  <section class="order-section">
+    <h2>Place Your Order</h2>
+    <div class="tab-buttons">
+      <button data-tab="sourcing" onclick="openTab('sourcing')">Sourcing</button>
+      <button data-tab="shipping" onclick="openTab('shipping')">Shipping</button>
+    </div>
 
-      <!-- Toggle Tabs -->
-      <div class="tab-buttons">
-        <button class="tab-btn active" data-tab="sourcing">Sourcing</button>
-        <button class="tab-btn" data-tab="shipping">Shipping</button>
-      </div>
-
-      <!-- Sourcing Form -->
-      <div class="tab-content active" id="sourcing">
-        <form id="sourcing-form">
-          <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" required>
-
-          <label for="email">Email Address</label>
-          <input type="email" id="email" required>
-
-          <label for="country">Destination Country</label>
-          <select id="country" required>
-            <option value="">Select Country</option>
-            <option value="UK">United Kingdom</option>
-            <option value="USA">United States</option>
-            <option value="Canada">Canada</option>
-          </select>
-
-          <label for="items">Items You Want Us to Source</label>
-          <textarea id="items" rows="4" placeholder="E.g., Garri Ijebu, Dried Fish..." required></textarea>
-
-          <button type="submit" class="cta-button">Send to WhatsApp</button>
-        </form>
-      </div>
-
-      <!-- Shipping Form -->
-      <div class="tab-content" id="shipping">
-        <div class="cargo-types">
-          <div class="cargo-card">
-            <img src="images/protein-icon.png" alt="Protein Icon">
-            <h3>🦐 Protein Cargo</h3>
-            <ul>
-              <li>Dry Fish</li>
-              <li>Stockfish</li>
-              <li>Crayfish</li>
-              <li>Dried Meat</li>
-              <li>Periwinkle</li>
-            </ul>
-          </div>
-          <div class="cargo-card">
-            <img src="images/general-icon.png" alt="General Cargo Icon">
-            <h3>📦 General Cargo</h3>
-            <ul>
-              <li>Garri Ijebu</li>
-              <li>Yam Flour</li>
-              <li>Egusi, Ogbono</li>
-              <li>Herbs, Spices</li>
-              <li>Clothing</li>
-            </ul>
-          </div>
+    <div class="tab-content" id="sourcing">
+      <div class="cargo-category">
+        <div class="cargo-card">
+          <img src="images/garri-ijebu.jpg" alt="Garri">
+          <h4>Garri Ijebu</h4>
+          <p>High quality Ijebu garri in 5kg/10kg packs.</p>
         </div>
-
-        <form id="shipping-form">
-          <label for="senderName">Sender Name</label>
-          <input type="text" id="senderName" required>
-
-          <label for="pickupLocation">Pickup Address in Nigeria</label>
-          <textarea id="pickupLocation" rows="2" required></textarea>
-
-          <label for="cargoDetails">Cargo Description</label>
-          <textarea id="cargoDetails" rows="4" placeholder="List items and estimated weight..." required></textarea>
-
-          <label for="deliveryCountry">Delivery Country</label>
-          <select id="deliveryCountry" required>
-            <option value="">Select Country</option>
-            <option value="UK">United Kingdom</option>
-            <option value="USA">United States</option>
-            <option value="Canada">Canada</option>
-          </select>
-
-          <button type="submit" class="cta-button">Send Shipping Request</button>
-        </form>
+        <div class="cargo-card">
+          <img src="images/ankara.jpg" alt="Ankara">
+          <h4>Ankara Fabric</h4>
+          <p>Colorful, authentic Nigerian Ankara fabrics.</p>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <!-- WhatsApp Form Script -->
-  <script>
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    <div class="tab-content" id="shipping">
+      <h3>Protein Cargo</h3>
+      <div class="cargo-category">
+        <div class="cargo-card">
+          <img src="images/dried-fish.jpg" alt="Dried Fish">
+          <h4>Dried Fish</h4>
+          <p>Cleaned and dried fish for shipping.</p>
+        </div>
+        <div class="cargo-card">
+          <img src="images/dried-meat.jpg" alt="Dried Meat">
+          <h4>Dried Meat</h4>
+          <p>Preserved Nigerian bush meat and suya.</p>
+        </div>
+      </div>
 
-        btn.classList.add('active');
-        document.getElementById(btn.dataset.tab).classList.add('active');
-      });
-    });
+      <h3>General Cargo</h3>
+      <div class="cargo-category">
+        <div class="cargo-card">
+          <img src="images/food-items.jpg" alt="Foodstuff">
+          <h4>Foodstuff Box</h4>
+          <p>Yam flour, ogbono, egusi, and more packed safely.</p>
+        </div>
+        <div class="cargo-card">
+          <img src="images/contact-whatsapp.jpg" alt="Whatsapp Box">
+          <h4>Custom Packages</h4>
+          <p>Tailored cargo options for your shipment abroad.</p>
+        </div>
+      </div>
+    </div>
 
-    document.getElementById("sourcing-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const name = document.getElementById("fullName").value;
-      const email = document.getElementById("email").value;
-      const country = document.getElementById("country").value;
-      const items = document.getElementById("items").value;
+    <form class="order-form" onsubmit="event.preventDefault(); window.open('https://wa.me/2347062302148?text=I%20want%20to%20place%20an%20order%20via%20AfriShip');">
+      <input type="text" placeholder="Your Name" required>
+      <input type="text" placeholder="Destination Country" required>
+      <textarea rows="4" placeholder="Describe your order or sourcing request..."></textarea>
+      <button type="submit">Place Order via WhatsApp</button>
+    </form>
+  </section>
 
-      const msg = `Hello AfriShip,%0AI'm requesting sourcing help.%0AName: ${name}%0AEmail: ${email}%0ACountry: ${country}%0AItems: ${items}`;
-      window.open(`https://wa.me/2347062302148?text=${msg}`, '_blank');
-    });
-
-    document.getElementById("shipping-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const name = document.getElementById("senderName").value;
-      const address = document.getElementById("pickupLocation").value;
-      const details = document.getElementById("cargoDetails").value;
-      const country = document.getElementById("deliveryCountry").value;
-
-      const msg = `Hello AfriShip,%0AI have a shipping request.%0AName: ${name}%0AAddress: ${address}%0ACargo: ${details}%0ACountry: ${country}`;
-      window.open(`https://wa.me/2347062302148?text=${msg}`, '_blank');
-    });
-  </script>
-
+  <footer class="footer">
+    <p>&copy; 2025 AfriShip Solutions. All rights reserved.</p>
+  </footer>
 </body>
 </html>
