@@ -8,18 +8,15 @@
   <link rel="stylesheet" href="animations.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <img src="images/logo.png" alt="AfriShip Logo" class="logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Our Services</a></li>
-        <li><a href="prices.html">Prices</a></li>
-         <li><a href="order.html">Order</a></li>
-      </ul>
-    </nav>
-  </header>
+ <div id="navbar-placeholder"></div>
+<script>
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+
 
   <!-- Hero Banner -->
   <section class="service-hero fade-in">
