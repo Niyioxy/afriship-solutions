@@ -237,14 +237,23 @@ body {
     max-width: 120px;
   }
 
-  .map-container img {
+ .map-container img {
   max-width: 400px;
   width: 100%;
   height: auto;
-  margin: 20px auto;
   display: block;
+  margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.reach-section {
+  text-align: center;
+  padding: 60px 10%;
+  background-color: #ffffff;
+  color: #1A237E;
+}
+
 }
 
 
