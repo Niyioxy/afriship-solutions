@@ -150,6 +150,13 @@ body {
 .logo {
   height: 50px;
 }
+.logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  max-width: 100%;
+  display: inline-block;
+}
 
 /* Navigation Bar Styling */
 .navbar {
