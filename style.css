@@ -288,6 +288,25 @@ body {
   margin: auto;
 }
 
+
+    .mission-vision {
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 60px 20px;
+    }
+
+    .mission-vision h2 {
+      color: #007F5F;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .mission-vision p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      color: #444;
+      line-height: 1.7;
 .flyer-img-small {
   width: 100%;
   max-width: 550px;
