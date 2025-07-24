@@ -205,15 +205,15 @@ body {
   color: #F4B400; /* Mustard highlight on hover */
 }
 @media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    background-color: #007F5F;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    display: none;
+  .logo img {
+    height: 40px;
+    max-width: 120px;
   }
+
+  .map-container img {
+    max-width: 90%;
+  }
+}
 
   .nav-links.active {
     display: flex;
@@ -566,12 +566,15 @@ body {
 }
 
 .map-container img {
-  max-width: 600px;
+  max-width: 400px;
   width: 100%;
   height: auto;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
+
 
 #contact {
   background-color: #fefefe;
