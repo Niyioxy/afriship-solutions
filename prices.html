@@ -138,13 +138,15 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo-container">
-      <a href="index.html">
-        <img src="images/logo.png" alt="AfriShip Logo" />
-      </a>
-    </div>
+ <div id="navbar-placeholder"></div>
+<script>
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Our Services</a></li>
