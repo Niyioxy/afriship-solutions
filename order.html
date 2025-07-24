@@ -133,17 +133,14 @@
   </script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html"><img src="images/logo.png" alt="AfriShip Logo"></a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="prices.html">Prices</a></li>
-      <li><a href="order.html" class="active">Order</a></li>
-    </ul>
-  </nav>
+  <div id="navbar-placeholder"></div>
+<script>
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
 
   <section class="order-section">
     <h2>Place Your Order</h2>
