@@ -6,22 +6,20 @@
   <title>About Us - AfriShip Solutions</title>
   <link rel="stylesheet" href="styles.css?v=2">
   <style>
-    .site-header {
-      background-color: #007F5F;
-      padding: 15px 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
     .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 0 20px;
+      align-items: center;
+      padding: 15px 30px;
+      max-width: 1200px;
+      margin: auto;
     }
+
+    .logo-img {
+      height: 50px;
+      width: auto;
+    }
+
     .nav-links {
       list-style: none;
       display: flex;
@@ -29,27 +27,79 @@
       margin: 0;
       padding: 0;
     }
-    .nav-links a {
+
+    .nav-links li a {
+      color: #fff;
       text-decoration: none;
       font-weight: 600;
-      color: #fff;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
-    .nav-links a:hover,
-    .nav-links .active {
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
       color: #F4B400;
     }
-    .logo-img {
-      height: 50px;
-      max-width: 160px;
+
+    .map-container img {
+      max-width: 100%;
+      height: auto;
+      max-height: 300px;
       display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about-image,
+    .about-content {
+      flex: 1 1 400px;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #007F5F;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #F4B400;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <header class="site-header">
+  <header class="site-header" style="background-color:#007F5F; position:sticky; top:0; z-index:1000;">
     <div class="nav-container">
       <a href="index.html" class="logo">
         <img src="images/logo.png" alt="AfriShip Logo" class="logo-img">
