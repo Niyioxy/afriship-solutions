@@ -417,11 +417,24 @@ body {
 }
 
 .service-hero {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('images/global-map.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('images/global-map.jpg') center/cover no-repeat;
   color: white;
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
+  animation: fadeInUp 1.5s ease forwards;
 }
+
+.service-hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-hero p {
+  font-size: 20px;
+  margin-top: 0;
+}
+
 
 .why-us, .how-it-works, .cta {
   padding: 60px 20px;
