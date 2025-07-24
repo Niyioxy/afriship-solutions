@@ -5,6 +5,11 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+.nav-links a.active {
+  border-bottom: 2px solid #F4B400;
+  color: #F4B400;
+}
+
 * {
   margin: 0;
   padding: 0;
