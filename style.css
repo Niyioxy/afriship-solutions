@@ -97,8 +97,8 @@ body {
   color: #F4B400; /* Mustard Yellow */
 }
 
-.logo img {
-  height: 50px;
+.logo {
+  display: block;
 }
 
 
