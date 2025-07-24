@@ -12,10 +12,10 @@
 .logo img {
   height: 50px;
   width: auto;
-  max-width: 150px; /* Prevents oversized logo */
+  max-width: 160px;
+  display: block;
 }
 
-* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
