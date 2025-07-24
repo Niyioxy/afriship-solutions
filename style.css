@@ -30,13 +30,46 @@ body {
 
 /* Header & Nav Styling */
 .site-header {
-  background-color: #007F5F; /* Emerald Green */
+  background-color: #007F5F;
   padding: 15px 30px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  max-width: 160px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #F4B400;
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
