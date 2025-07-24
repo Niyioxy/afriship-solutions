@@ -237,15 +237,16 @@ body {
     max-width: 120px;
   }
 
- .map-container img {
-  max-width: 400px;
+.map-container img {
+  max-width: 500px;
   width: 100%;
   height: auto;
   display: block;
-  margin: 20px auto;
+  margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
+
 
 .reach-section {
   text-align: center;
