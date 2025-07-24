@@ -9,6 +9,11 @@
   border-bottom: 2px solid #F4B400;
   color: #F4B400;
 }
+.logo img {
+  height: 50px;
+  width: auto;
+  max-width: 150px; /* Prevents oversized logo */
+}
 
 * {
   margin: 0;
