@@ -46,12 +46,6 @@ body {
   margin: auto;
 }
 
-.logo img {
-  height: 50px;
-  width: auto;
-  max-width: 160px;
-}
-
 .nav-links {
   list-style: none;
   display: flex;
