@@ -52,6 +52,15 @@ src="https://www.facebook.com/tr?id=1849859585559602&ev=PageView&noscript=1"
 
 </head>
 <body>
+  <div id="navbar-placeholder"></div>
+<script>
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPT7NJ96"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
