@@ -127,39 +127,69 @@
       margin-bottom: 30px;
     }
 
+    .flag-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .flag-item {
+      text-align: center;
+      max-width: 100px;
+    }
+
+    .flag-item img {
+      width: 60px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .flag-item span {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .site-footer {
+      background-color: #1A237E;
+      color: #fff;
+      padding: 60px 30px 30px;
+      font-size: 15px;
+    }
+
     .footer-container {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 60px 10%;
-      background-color: #1A237E;
-      color: #ffffff;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .footer-brand h3 {
-      font-size: 24px;
+      font-size: 28px;
       color: #F4B400;
+      margin-bottom: 10px;
     }
 
     .footer-links h4,
     .footer-contact h4 {
+      margin-bottom: 10px;
       color: #F4B400;
+      font-size: 18px;
     }
 
-    .footer-links ul,
-    .footer-contact ul {
+    .footer-links ul {
       list-style: none;
       padding: 0;
     }
 
-    .footer-links ul li,
-    .footer-contact p {
-      margin-bottom: 10px;
-    }
-
     .footer-links ul li a {
-      color: #ffffff;
       text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
     }
 
     .footer-links ul li a:hover {
@@ -167,11 +197,11 @@
     }
 
     .footer-bottom {
-      background-color: #10174b;
       text-align: center;
-      padding: 15px;
-      color: #fff;
+      padding-top: 30px;
       font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -192,7 +222,13 @@
       </ul>
     </div>
   </header>
-  
+
+  <!-- Hero Section -->
+  <section class="service-hero">
+    <h1>Our Story</h1>
+    <p>How AfriShip is connecting Africans to home, one shipment at a time.</p>
+  </section>
+
   <!-- About Content -->
   <section class="about-section">
     <div class="about-container">
@@ -214,6 +250,28 @@
   <section class="reach-section">
     <h2>Our Global Reach</h2>
     <p>Delivering to the UK, US, Canada, and growing — in just 5–7 days.</p>
+    <div class="flag-list">
+      <div class="flag-item">
+        <img src="images/flags/uk.png" alt="UK Flag">
+        <span>United Kingdom</span>
+      </div>
+      <div class="flag-item">
+        <img src="images/flags/usa.png" alt="USA Flag">
+        <span>United States</span>
+      </div>
+      <div class="flag-item">
+        <img src="images/flags/france.png" alt="France Flag">
+        <span>France</span>
+      </div>
+      <div class="flag-item">
+        <img src="images/flags/netherlands.png" alt="Netherlands Flag">
+        <span>Netherlands</span>
+      </div>
+      <div class="flag-item">
+        <img src="images/flags/germany.png" alt="Germany Flag">
+        <span>Germany</span>
+      </div>
+    </div>
     <div class="map-container">
       <img src="images/global-map.jpg" alt="Map">
     </div>
